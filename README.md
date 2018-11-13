@@ -12,31 +12,31 @@
 ### If your device doesn’t have JSE, you can download it from the website https://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html
 
 1.	Start to install
-Click [下一步]
- 
+Click [下一步]  
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.1.png
 2.	Choose all and click [下一步], if you have some requirement about the installation path, click[更改] to change it and then click [下一步]
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.2.png
 3.	Wait
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.3.png
 4.	Click[关闭] 
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.4.png
 
 5.	Open the system interface, and click[高级系统设置]
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.5.png
 6.	Click[高级] and then click[环境变量]
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.6.png
 7.	Click[新建]
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.7.png
 8.	Follow this, fill the blank of [变量值] with your own path of jdk
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.8.png
 9.	Redo the step 7 and fill the blank of [变量值] with your own path of jre
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.9.png
 10.	Check the installation
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.10.png
 11.	Redo the step 7 and fill the blank of [变量值] with your own path of jdk
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.11.png
 12.	Redo the step 7 and fill the blank of [变量值] with your own path of jre
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/1.12.png
 
 
 
@@ -46,58 +46,58 @@ https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 make sure you download the right version
 
 1.	Start to install click[next]
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.1.png
 2.	Wait for it install the VS2013 redistributable
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.2.png
 3.	Choose installation directory, if you have no requirement, use the default
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.3.png
 4.	Choose data directory, if you have no requirement, use the default
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.4.png
 5.	Set your password, must use the password [root] or the database would not be connected
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.5.png
 6.	Set your port, must use the port [5432] or the database would not be connected
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.6.png
 7.	Just use the default setting
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.7.png
 8.	Wait for the installation finish
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/2.9.png
 9.	Finish install, do not choose to install the stack builder
- 
+
 ## Install the tomcat-8.0.48
 ### if your device doesn’t install tomcat-8.0.48, download it from the website
 	https://tomcat.apache.org/download-80.cgi
 choose one from this
- 
+![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/3.1.png 
 1.	Install it, unzip the file into the sub-directory you want
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/3.2.png 
 ## Restore the database
 1.	Start the GUI tool of PostgreSQL, the PgAdmin4
- 
+ ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.1.png 
 2.	Type your username and password
 3.	Choose create database
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.2.png
 4.	Fill the name blank with [Bibliosoft] and click[save]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.3.png
 5.	Choose [restore]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.4.png
 6.	Click[filename]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.5.png
 7.	Fill the path with the database path
- 
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.6.png
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.7.png
 8.	Click[select]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.8.png
 9.	Click[Restore]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/4.9.png
 # Deploy the Bibliosoft on tomcat
 1.	Put the war file under the tomcat path
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/5.1.png
 2.	Run the [startup.bat]
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/5.2.png
 3.	Wait for it start
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/5.3.png
 4.	Success! Congratulation!
- 
+  ![image]https://github.com/YuhsiHu/BiblioSoft/raw/master/images-storage/Configuration/5.4.png
 
 # Usage
 >> Default Admin ID: 1 Password: root  
