@@ -434,4 +434,24 @@
     <servlet-name>DeleteLocation</servlet-name>
     <url-pattern>/DeleteLocation</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdatePasswordForReader</display-name>
+    <servlet-name>UpdatePasswordForReader</servlet-name>
+    <servlet-class>BiblioSoft.readerAction.UpdatePasswordForReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatePasswordForReader</servlet-name>
+    <url-pattern>/UpdatePasswordForReader</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LibrarianForgetPswd</display-name>
+    <servlet-name>LibrarianForgetPswd</servlet-name>
+    <servlet-class>BiblioSoft.librarianAction.LibrarianForgetPswd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LibrarianForgetPswd</servlet-name>
+    <url-pattern>/LibrarianForgetPswd</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -118,6 +118,7 @@
 								</table>
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
 							</form>
+							<button type="button" class="btn btn-link btn-block" onclick="window.location.href='librarianForgetPassword.jsp'">Forget Password</button>
 							<td>
 							</td>
 						</div>
