@@ -1,0 +1,76 @@
+Admin(Strong)
+  --Admin_id(simple value, simple numeric)  Length:10		PK  Admin_id 应当自增
+  --password(simple value, simple string)	Length:32			默认密码为000001
+  --Admin_name(simple value, simple string)	Length:40
+  
+Librariaan(Strong)
+  --Lib_id(simple value, simple numeric)	Length:10		PK  Lib_id 应当自增
+  --password(simple value, simple string)	Length:32			默认密码为00010001
+  --Lib_name(simple value, simple string)	Length:40
+  
+Reader(Strong)
+  --Reader_id(simple value, simple numeric)	Length:10	PK  Reader_id 应当自增
+  --password(simple value, simple string)	Length:32			默认密码为12345678
+  --sex(simple value, simple string)		Length:6(female)
+  --Reader_name(simple value, simple string)Length:40
+  --email(simple value, simple string)		Length:320(local_part@domain_part  local_part:64位 domain_part:255位 总共320位长度)
+  --Tele(simple value, simple string)		Length:20	  读者登录账号为手机账号
+  --MaxBorrow(simple value, simple numeric)	Length:1
+  --LongestTime(simple value, simple string)Length:2		只有Admin才有权限更改该数值(默认数值为30天，直接调用Default_value中的值）													
+  --Deposit(simple value, simple numeric)	Length:3  		只有Admin才有权限更改该数值（默认数值为300元，直接调用Default_value中的值）
+  
+Book(Strong)
+  --ISBN(simple value, simple string)		Length:13(注意老版ISBN为10位数，需要做字符串拼接转换)		PK
+  --Book_name(simple value, simple string)	Length:80(没有比这更长的书名了吧)
+  --Book_Description(simple value, simple string) Length:Unlimited(不知道限定啥干脆不限定了随便写)
+  --Edition(simple value, simple String)	Length:Unlimited
+  --Language(simple value, simple string)	Length:40(什么语言40个字符位放不下...)
+  --Publisher_time(simple value, simple string)Length:DATE		 (yyyy-mm-dd)												
+  --price(simple value, simple string)		Length:8(不会有这么贵的书吧...)
+  --page(simple value, simple numeric)		Length:5(不会有这么厚的书吧...)
+  --publisher_name(simple value,simple string) Length:Unlimited
+  --author(simple value,simple string) Length:Unlimited
+  --catagory(simple value, simple string) Length:Unlimited
+
+  
+BookInLib(Strong)
+  --Book_id(simple value, simple numeric)	Length:10	PK	Book_id 应当自增
+  --ISBN(simple value, simple string)		Length:13	FK
+  --Status(simple value, simple string, check with borrowed or available)	Length:15  应包含以下状态（avaliable unavaliable lost reserved deleted)
+  --Location(simple value, simple string)  Length:Unlimited
+
+Record(Weak)
+  --Book_id(simple value, simple numeric)	Length:10	FKPK
+  --Reader_id(simple value, simple numeric)	Length:10	FKPK
+  --Start_time(DATE)
+  --Return_time(DATE)  未归还时该值为null
+  --current_fine(simple value, simple numeric) Length:10   该数值分为三个状态（按时归还书籍：0 超期归还且已经缴纳违约金：正数 超期且未缴纳违约金：负数（其绝对值为应当缴纳的违约金）  
+
+  
+Income(Strong)
+  --income_id(simple value, simple numeric)	Length:10 PK income_id应当自增
+  --income_date(DATE)
+  --income_value(simple value,simple numeric) Length:10 收入来源为两项（fine 和 deposit）
+  --income_from(simple value,simple string) Length:Unlimited 值有两个（fine 和deposit 用于标识收入来源）
+  
+Reserve(Strong)
+  --reader_id(simple value, simple numeric) Length:10 PKFK
+  --book_id(simple value, simple numeric) Length:10 PKFK
+  --Start_time(DATE)
+  --DeadLine_time(DATE) 该值用于显示在该时间之前必须到达图书馆借阅预约书籍
+  
+Default_value(weak)
+  --LongestTime(simple value, simple numeric) Length:10 用于标识一本书的默认最大借阅时间
+  --fine(simple value, simple numeric) Length:10		用于标识默认违约金数额
+  --deposit(simple value, simple numeric) Length:10		用于标识默认保证金数额
+  --reserve_time(simple value, simple numeric) Length:10用于标识默认预约最大时间
+  
+Post(Strong)
+  --title(simple value, simple string) Length:Unlimited PK
+  --body(simple value, simple string) Length:Unlimited
+  --create_time(simple value, simple timestamp with time zone) 用于记录post被创建的时间
+  --Lib_id(simple value, simple integer) 用于标记创建本Post的图书管理员的id，本应当做外键处理，考虑到用作外键对数据库操作的复杂性，此处外键的逻辑功能由前端实现
+
+DeleteBook(week)
+  --book_id(simple valule, simple integer) FK
+  --Lib_id(simple value, simple integer) 用于标记删除书籍的图书管理员id,本应当做外键处理，考虑到用作外键对数据库操作的复杂性，此处外键的逻辑功能由前端实现
